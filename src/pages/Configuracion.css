@@ -1,0 +1,41 @@
+.configuracion-content {
+    --background: #1e1e1e;
+    color: white;
+  }
+  
+  .config-list ion-item {
+    --background: #333;
+    --color: white;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  
+  /* Agrandar las etiquetas solo en la pantalla de configuración */
+  .config-list ion-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .config-list ion-select,
+  .config-list ion-toggle {
+    font-size: 1rem;
+  }
+  
+  /* Botón estilizado */
+  ion-button {
+    margin-top: 20px;
+    --border-radius: 10px;
+    --background: #4CAF50;
+    font-weight: bold;
+  }
+  .cambiar-contrasena-button {
+    margin-top: 20px;
+  }
+  
+  .botonVolver {
+    margin-top: 10px;
+    --background: #f4f4f4;
+    --color: #000000;
+    --border-radius: 10px;
+  }
+    

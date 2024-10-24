@@ -1,0 +1,32 @@
+.contenedorAcercaApp {
+    --background: #141414; 
+    color: #d0d0d0; 
+  }
+  
+  .blockAcercaApp {
+    background-color: #1f1f1f; 
+    color: #ffffff;
+    margin-bottom: 30px; 
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .blockAcercaApp .ion-card-title {
+    color: #6699ff; 
+    font-size: 1.6rem;
+  }
+  
+  .blockAcercaApp p, .blockAcercaApp ul {
+    font-size: 1.1rem;
+    color: #cccccc; 
+  }
+  
+  ul {
+    list-style-type: square; 
+    padding-left: 25px;
+  }
+  
+  .contenedorAcercaApp .ion-breadcrumb {
+    color: #6699ff; 
+  }
+  

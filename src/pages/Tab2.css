@@ -1,0 +1,142 @@
+/* Estilo general del tab de transacciones */
+.listaTarjetas {
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+  
+  /* Mejora el diseño responsivo para tarjetas */
+  .tarjeta {
+    --background: linear-gradient(145deg, #2c2c2c, #383838);
+    color: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+    padding: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efecto hover en tarjetas */
+  .tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Estilo del título de la tarjeta */
+  .tarjeta ion-card-title {
+    font-size: 1.6rem;
+    color: #7824ff;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  /* Estilo del subtítulo de la tarjeta */
+  .tarjeta ion-card-subtitle {
+    font-size: 1.1rem;
+    color: #cccccc;
+  }
+  
+  /* Estilo de los párrafos dentro de la tarjeta */
+  .tarjeta p {
+    margin: 12px 0;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+  }
+  
+  /* Estilo de las transacciones */
+  .listaTransaciones {
+    background-color: #1f1f1f;
+    padding: 15px;
+  }
+  
+  /* Estilo individual de las transacciones */
+  .transacion {
+    --background: #2c2c2c;
+    color: white;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover en transacciones */
+  .transacion:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    --background: #3a3a3a;
+  }
+  
+  /* Estilo del icono en transacciones */
+  .transacion ion-icon {
+    color: #00ca3d;
+    font-size: 1.8rem;
+    margin-right: 14px;
+  }
+  
+  /* Estilo de los encabezados en transacciones */
+  .transacion h2 {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  
+  /* Estilo de los párrafos en transacciones */
+  .transacion p {
+    color: #bbbbbb;
+    font-size: 1.1rem;
+  }
+  
+  /* Ajuste responsivo: mejora la apariencia en pantallas pequeñas */
+  @media (max-width: 600px) {
+    .tarjeta {
+      padding: 12px;
+      font-size: 1rem;
+    }
+  
+    .tarjeta ion-card-title {
+      font-size: 1.4rem;
+    }
+  
+    .tarjeta ion-card-subtitle {
+      font-size: 1rem;
+    }
+  
+    .tarjeta p {
+      font-size: 1rem;
+    }
+  
+    .transacion {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  
+    .transacion h2 {
+      font-size: 1.1rem;
+    }
+  
+    .transacion p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Ajustes para el gráfico */
+  #gananciasChart {
+    margin: 20px auto;
+    max-width: 800px;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-color: #1f1f1f;
+  }
+  
+  /* Asegura que el gráfico se vea bien en pantallas pequeñas */
+  @media (max-width: 600px) {
+    #gananciasChart {
+      height: 250px;
+    }
+  }
+  
+  

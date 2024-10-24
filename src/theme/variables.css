@@ -1,2 +1,16 @@
-/* For information on how to create your own theme, please see:
-http://ionicframework.com/docs/theming/ */
+.boton-global {
+    font-family: 'Arial', sans-serif; /* Fuente uniforme */
+    background: linear-gradient(135deg, #4caf50, #43a047); /* Degradado de fondo */
+    color: white; /* Texto en blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    border: none; /* Sin bordes */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-transform: uppercase; /* Mayúsculas para el texto */
+  }
+
+:root {
+  --color-primario: #3880ff; /* Azul primario */
+  --color-secundario: #3dc2ff; /* Azul claro */
+  --color-fondo: #1e1a27; /* Fondo claro */
+  --color-texto: #222; /* Color de texto principal */
+}

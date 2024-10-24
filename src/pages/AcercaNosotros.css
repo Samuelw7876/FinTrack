@@ -1,0 +1,28 @@
+.acerca-nosotros-content {
+    --background: #1a1a1a; /* Fondo oscuro específico para esta página */
+    color: #e0e0e0; /* Color del texto */
+  }
+  
+  .nosotros-card {
+    background-color: #282828; /* Fondo para las tarjetas */
+    color: #ffffff; /* Color del texto */
+    margin-bottom: 25px; /* Margen entre las tarjetas */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .nosotros-card .ion-card-title {
+    color: #66cc99; /* Verde diferente para el título */
+    font-size: 1.5rem;
+  }
+  
+  .nosotros-card p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #cccccc; /* Texto más claro */
+  }
+  
+  .acerca-nosotros-content .ion-breadcrumb {
+    color: #66cc99; /* Verde para las migas de pan */
+  }
+  

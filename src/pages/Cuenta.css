@@ -1,0 +1,33 @@
+.cuenta-content {
+    --background: #181818;
+    color: #ffffff;
+  }
+  
+  .cartaCuenta {
+    background-color: #252525;
+    color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 15px;
+  }
+  
+  .cartaCuenta .ion-card-title {
+    color: #a0e7e5;
+    font-size: 1.4rem;
+  }
+  
+  .cartaCuenta p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #e0e0e0;
+  }
+  
+  .ion-card-title {
+    text-align: left;
+  }
+  
+  .cartaCuenta-content {
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  

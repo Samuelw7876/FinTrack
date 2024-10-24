@@ -1,0 +1,67 @@
+
+.menu-header {
+    padding: 20px;
+    background-color: #252525; /* Color gris oscuro */
+    color: white;
+    
+  }
+  
+  /* Estilo de la lista del menú */
+  .menu-list {
+    background-color: #252525; /* Color gris oscuro */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 70.97vh;
+  }
+  
+  
+  .nombrePerfil {
+    font-size: 1.5rem; /* Ajustamos el tamaño del nombre */
+    font-weight: bold;
+    padding-right: 70px;
+    text-align: right;
+  }
+  
+  .nombreCorreo {
+    font-size: 1.1rem; /* Ajustamos el tamaño del correo */
+    color: #d1d1d1; /* Un color más claro para diferenciar el correo */
+    padding-right: 110px;
+    text-align: right;
+  }
+  
+  ion-content {
+    background-color: #252525; /* Asegura que todo el contenido tenga el fondo gris */
+  }
+  
+  ion-item {
+    --background: transparent;
+    color: white; /* Texto blanco para las opciones del menú */
+    font-weight: bold;
+    --border-color: transparent;
+  }
+  
+  /* Añadir un efecto hover (cuando se pasa el mouse por encima de las opciones) */
+  ion-item:hover {
+    background-color: rgba(174, 0, 255, 0.1);
+  }
+  
+  /* Estilo de los íconos */
+  ion-icon {
+    color: #ffffff;
+    margin-right: 10px;
+  }
+  
+  .separator {
+    border-top: 1px solid #ffffff; /* Línea blanca fina */
+    margin: 10px 0; /* Margen para darle espacio */
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+  }
+  
+  ion-footer {
+    background-color: #252525; /* Fondo gris */
+    margin-top: auto; /* Esto empuja el footer al fondo */
+    
+  }
+  

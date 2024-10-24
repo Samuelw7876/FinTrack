@@ -1,0 +1,81 @@
+/* Contenedor principal del contenido detallado del mensaje */
+.contenido-detalle-mensaje {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+    background-color: #121212;
+    box-sizing: border-box;
+    padding-left: 20px; /* Añade espacio del margen izquierdo */
+    padding-right: 20px; /* Añade espacio del margen derecho */
+  }
+  
+  /* Encabezado con icono, nombre y fecha */
+  .detalle-cabecera {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    padding-left: 20px; /* Añadir espacio en los laterales del encabezado */
+    padding-right: 20px;
+  }
+  
+  .icono-detalle {
+    color: #4caf50;
+    font-size: 3.5rem;
+    margin-right: 15px;
+  }
+  
+  .info-detalle {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .remitente-nombre {
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin: 0;
+  }
+  
+  .mensaje-fecha {
+    color: #999999;
+    font-size: 1rem;
+  }
+  
+  /* Título del mensaje */
+  .titulo-detalle-mensaje {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 20px 0;
+    padding-left: 20px;
+  }
+  
+  /* Contenido del mensaje */
+  .mensaje-contenido {
+    font-size: 1.1rem;
+    color: #dddddd;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    padding-left: 20px; /* Separar el contenido del margen izquierdo */
+    padding-right: 20px;
+    text-align: justify; /* Opcional: Justificar el texto para mayor claridad */
+  }
+  
+  /* Botones al final de la página */
+  .botones-acciones {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 20px;
+    background-color: #121212;
+    box-sizing: border-box;
+  }
+  

@@ -1,0 +1,83 @@
+/* Estilos para los párrafos de los mensajes */
+ion-item p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 95%;
+  }
+  /* Estilo para la barra de búsqueda */
+  .barra-busqueda {
+      --background: #2c2c2c;
+      --color: #ffffff;
+      --placeholder-color: #999999;
+      border: 2px solid #4caf50;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    
+    /* Contenedor de los chips para filtros */
+    .filtros-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .filtros-chips ion-chip {
+      background-color: #333333;
+      color: #ffffff;
+      border: 1px solid #4caf50;
+      padding: 8px;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .filtros-chips ion-chip[outline] {
+      background-color: transparent;
+      color: #ffffff;
+      border-color: #4caf50;
+    }
+    
+    .filtros-chips ion-chip:hover {
+      background-color: #4caf50;
+      color: #ffffff;
+    }
+    
+    /* Estilo de la lista de mensajes */
+    .lista-mensajes {
+      background-color: #1e1e1e;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    
+    .lista-mensajes ion-item {
+      --background: #2c2c2c;
+      border-bottom: 1px solid #444444;
+      padding: 12px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .lista-mensajes ion-item:hover {
+      --background: #333333;
+    }
+    
+    /* Estilo del nombre del remitente */
+    .lista-mensajes ion-label h2 {
+      font-size: 1.4rem;
+      color: #ffffff;
+    }
+    
+    /* Estilo del asunto del mensaje */
+    .lista-mensajes ion-label h3 {
+      font-size: 1.1rem;
+      color: #cccccc;
+    }
+    
+    /* Estilo de la vista previa del mensaje */
+    .lista-mensajes ion-label p {
+      font-size: 0.9rem;
+      color: #aaaaaa;
+    }
+    

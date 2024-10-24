@@ -1,0 +1,49 @@
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  ion-card-content h1 {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  ion-card-content h2 {
+    font-size: 1rem;
+    color: #6a6a6a;
+    margin-bottom: 20px;
+  }
+  
+  .edit-item-tab4 ion-label {
+    font-weight: bold;
+    color: #ff6600; 
+    font-size: 1.1rem;
+  }
+  
+  .edit-item-tab4 ion-input {
+    --padding-start: 15px;
+    --background: #ffffff; 
+    color: #000000; 
+  }
+  
+  .tab4-buttons ion-button {
+    margin-top: 20px;
+    --border-radius: 10px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    font-weight: bold;
+    --padding: 15px 20px;
+    --background: linear-gradient(90deg, #007bff, #00c6ff); 
+  }
+  
+  .tab4-buttons ion-button + ion-button {
+    margin-top: 10px;
+  }
+  

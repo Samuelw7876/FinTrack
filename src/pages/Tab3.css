@@ -1,0 +1,65 @@
+/* Estilo para el título */
+.titulo-notificaciones {
+    font-size: 1.8rem;
+    color: #4caf50;
+    text-align: center;
+    font-weight: bold;
+    padding: 12px;
+    border-bottom: 2px solid #4caf50;
+  }
+  
+  /* Contenedor de la página */
+  .contenido-notificaciones {
+    background-color: #1e1e1e;
+    padding: 15px;
+    min-height: 100vh;
+  }
+  
+  /* Estilo del item de mensaje */
+  .mensaje-item {
+    --background: #2c2c2c;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .mensaje-item:hover {
+    --background: #333333;
+  }
+  
+  /* Icono del mensaje a la izquierda */
+  .icono-mensaje {
+    color: #4caf50;
+    font-size: 2rem;
+    margin-right: 12px;
+  }
+  
+  /* Nombre del remitente */
+  .mensaje-nombre {
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+  
+  /* Asunto del mensaje */
+  .mensaje-asunto {
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin-top: 5px;
+  }
+  
+  /* Vista previa del mensaje */
+  .mensaje-preview {
+    font-size: 0.9rem;
+    color: #888888;
+    margin-top: 8px;
+  }
+  
+  /* Hora del mensaje a la derecha */
+  .mensaje-hora {
+    font-size: 0.8rem;
+    color: #aaaaaa;
+    float: right;
+  }
+  
