@@ -1,63 +1,264 @@
 /* Home.css */
 
-/* Fondo con degradado relajante azul/verde */
+/* Fondo de la página */
 .gradient-background {
-    background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Degradado azul profundo a celeste suave */
-    height: 100vh; /* Asegura que el fondo ocupe toda la pantalla */
+    background: linear-gradient(135deg, #0c4b6b, #2c3e50, #4ca1af); /* Degradado relajante entre azules y verdes */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
+/* Titulo de la página */
 .title {
     font-size: 32px;
-    color: #ecf0f1; /* Blanco suave para el texto en modo oscuro */
+    color: #ecf0f1;
     margin-bottom: 20px;
 }
 
+/* Contenedor de los botones */
 .button-container {
     width: 80%;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    position: relative;
 }
 
-/* Estilo personalizado para los botones */
-.custom-button {
-    --background: linear-gradient(45deg, #1abc9c, #16a085); /* Degradado verde menta para los botones */
-    --color: white; /* Color del texto */
-    --border-radius: 12px; /* Bordes redondeados */
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+/* Home.css */
+
+/* Fondo de la página */
+.gradient-background {
+    background: linear-gradient(135deg, #0c4b6b, #2c3e50, #4ca1af); /* Degradado relajante entre azules y verdes */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
 }
 
-/* Efecto hover para los botones */
-.custom-button:hover {
-    --background: linear-gradient(45deg, #16a085, #1abc9c); /* Cambio de colores sutil en hover */
+/* Titulo de la página */
+.title {
+    font-size: 32px;
+    color: #ecf0f1;
+    margin-bottom: 20px;
 }
 
-/* Estilo para el segundo tipo de botón (si lo necesitas) */
-.custom-button.secondary {
-    --background: linear-gradient(45deg, #2980b9, #3498db); /* Degradado azul más brillante para botones secundarios */
-    --color: white;
+/* Contenedor de los botones */
+.button-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
 }
 
-.custom-button.secondary:hover {
-    --background: linear-gradient(45deg, #3498db, #2980b9); /* Cambio sutil en hover */
+/* ------------------ Botón 1: Carrusel de colores (desplazamiento horizontal) ------------------ */
+
+/* Botón 1 */
+.custom-button1 {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(45deg, #175164, #2ccfaf, #27d2ec); /* Gradiente inicial */
+    background-size: 400% 400%;  /* Aumentamos el tamaño del gradiente para hacer el ciclo más fluido */
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: colorCarousel1 12s infinite linear; /* Reducimos la velocidad a 12 segundos */
 }
 
-
-/* Para el modo claro */
-@media (prefers-color-scheme: light) {
-    .gradient-background {
-        background: linear-gradient(135deg, #00bcd4, #00a2b1); /* Degradado brillante en tonos azules para el modo claro */
+/* Animación de desplazamiento de color horizontal (suave y sin cortes) */
+@keyframes colorCarousel1 {
+    0% {
+        background-position: 0% 50%;
     }
-
-    .title {
-        color: #212121; /* Color oscuro para el modo claro */
+    50% {
+        background-position: 100% 50%;
     }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
-    .custom-button {
-        --background: linear-gradient(45deg, #1abc9c, #16a085); /* Degradado verde menta para el modo claro */
+/* ------------------ Botón 2: Carrusel de colores (desplazamiento horizontal) ------------------ */
+
+/* Botón 2 */
+.custom-button2 {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(45deg, #16a085, #2c3e50, #4ca1af); /* Gradiente suave inicial */
+    background-size: 400% 400%;  /* Aumentamos el tamaño del gradiente para hacer el ciclo más fluido */
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: colorCarousel2 12s infinite linear; /* Reducimos la velocidad a 12 segundos */
+}
+
+/* Animación de desplazamiento de color horizontal (suave y sin cortes) */
+@keyframes colorCarousel2 {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ------------------ Botón 3: Carrusel de colores (desplazamiento horizontal) ------------------ */
+
+/* Botón 3 */
+.custom-button3 {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(45deg, #1e5f74, #16a085, #4ca1af); /* Gradiente inicial */
+    background-size: 400% 400%;  /* Aumentamos el tamaño del gradiente para hacer el ciclo más fluido */
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: colorCarousel3 12s infinite linear; /* Reducimos la velocidad a 12 segundos */
+}
+
+/* Animación de desplazamiento de color horizontal (suave y sin cortes) */
+@keyframes colorCarousel3 {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ------------------ Notificaciones Animadas ------------------ */
+
+/* Notificación 1: Deslizamiento desde abajo con pulsación */
+.notification1 {
+    position: fixed;
+    top: -60px; /* Empieza fuera de la pantalla */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #16a085; /* Verde suave */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: slide-up 0.8s ease-out forwards, pulse 1.5s infinite alternate; /* Animación de deslizamiento y pulsación */
+}
+
+/* Deslizar hacia arriba */
+@keyframes slide-up {
+    0% {
+        top: -60px;
+        opacity: 0;
+    }
+    100% {
+        top: 20px;
+        opacity: 1;
+    }
+}
+
+/* Pulsación suave */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Notificación 2: Rotación y escala */
+.notification2 {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4ca1af; /* Azul claro */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: rotate-scale 0.6s ease-out forwards, fade-out 2s 3s forwards; /* Animación de rotación y escala */
+}
+
+/* Rotación y escala */
+@keyframes rotate-scale {
+    0% {
+        transform: translateX(-50%) rotate(-90deg) scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-50%) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Notificación 3: Desplazamiento con rebote */
+.notification3 {
+    position: fixed;
+    top: -100px; /* Empieza fuera de la pantalla */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2c3e50; /* Azul oscuro */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: bounce-in 1s ease-out forwards, fade-out 2s 3s forwards; /* Animación de rebote */
+}
+
+/* Rebote al entrar */
+@keyframes bounce-in {
+    0% {
+        top: -100px;
+        opacity: 0;
+        transform: translateX(-50%) scale(0.8);
+    }
+    50% {
+        top: 20px;
+        opacity: 1;
+        transform: translateX(-50%) scale(1.1);
+    }
+    100% {
+        top: 20px;
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+/* Fade out (desvanecimiento) */
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: -50px;
     }
 }
