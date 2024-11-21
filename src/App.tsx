@@ -25,6 +25,7 @@ import AcercaApp from './pages/AcercaApp';
 import Inicio from './pages/Inicio';
 import Bienvenida from './pages/Bienvenida';
 import Registro from './pages/Registro'; 
+import Home from './pages/Home';
 
 import './theme/variables.css';
 import { homeSharp, walletSharp, notificationsSharp, personCircleSharp } from 'ionicons/icons';
@@ -60,7 +61,9 @@ const App: React.FC = () => (
             <Route exact path="/tab2" component={Tab2} />
             <Route exact path="/tab3" component={Tab3} />
             <Route exact path="/tab4" component={Tab4} />
+            <Route exact path="/home" component={Home} />
             <Route exact path="/vista-mensaje/:id" component={VistaMensajes} />
+            <Route exact path="/home/:id" component={Home} />
             <Route exact path="/soporte" component={Soporte} />
             <Route exact path="/configuracion" component={Configuracion} />
             <Route exact path="/cuenta" component={Cuenta} />

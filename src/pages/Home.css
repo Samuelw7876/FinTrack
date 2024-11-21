@@ -1,0 +1,63 @@
+/* Home.css */
+
+/* Fondo con degradado relajante azul/verde */
+.gradient-background {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Degradado azul profundo a celeste suave */
+    height: 100vh; /* Asegura que el fondo ocupe toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 32px;
+    color: #ecf0f1; /* Blanco suave para el texto en modo oscuro */
+    margin-bottom: 20px;
+}
+
+.button-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilo personalizado para los botones */
+.custom-button {
+    --background: linear-gradient(45deg, #1abc9c, #16a085); /* Degradado verde menta para los botones */
+    --color: white; /* Color del texto */
+    --border-radius: 12px; /* Bordes redondeados */
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+}
+
+/* Efecto hover para los botones */
+.custom-button:hover {
+    --background: linear-gradient(45deg, #16a085, #1abc9c); /* Cambio de colores sutil en hover */
+}
+
+/* Estilo para el segundo tipo de botón (si lo necesitas) */
+.custom-button.secondary {
+    --background: linear-gradient(45deg, #2980b9, #3498db); /* Degradado azul más brillante para botones secundarios */
+    --color: white;
+}
+
+.custom-button.secondary:hover {
+    --background: linear-gradient(45deg, #3498db, #2980b9); /* Cambio sutil en hover */
+}
+
+
+/* Para el modo claro */
+@media (prefers-color-scheme: light) {
+    .gradient-background {
+        background: linear-gradient(135deg, #00bcd4, #00a2b1); /* Degradado brillante en tonos azules para el modo claro */
+    }
+
+    .title {
+        color: #212121; /* Color oscuro para el modo claro */
+    }
+
+    .custom-button {
+        --background: linear-gradient(45deg, #1abc9c, #16a085); /* Degradado verde menta para el modo claro */
+    }
+}

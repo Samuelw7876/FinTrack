@@ -40,7 +40,7 @@
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     font-weight: bold;
     --padding: 15px 20px;
-    --background: linear-gradient(90deg, #007bff, #00c6ff); 
+    --background: linear-gradient(90deg, #f01996, #00c6ff); 
   }
   
   .tab4-buttons ion-button + ion-button {
