@@ -1,43 +1,86 @@
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonLabel } from '@ionic/react';
+import {
+  IonPage,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+  IonList,
+  IonItem,
+  IonLabel,
+} from '@ionic/react';
 import { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../firebaseConfig'; // Asegúrate de que este archivo esté configurado correctamente
-import './Tab2.css';
+import { getAuth } from 'firebase/auth';
+import { db } from '../firebase/firebaseConfig'; // Configuración de Firebase
 
 const Tab2: React.FC = () => {
-  const [movimientos, setMovimientos] = useState<any[]>([]);
+  const [transacciones, setTransacciones] = useState<any[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const obtenerMovimientos = async () => {
+    const obtenerTransacciones = async () => {
       try {
-        const movimientosRef = collection(db, 'usuarios', 'user1', 'tarjetas', 'tarjeta1', 'movimientos');
-        const snapshot = await getDocs(movimientosRef);
-        const movimientosData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-        setMovimientos(movimientosData);
+        const auth = getAuth();
+        const user = auth.currentUser;
+
+        console.log('Usuario autenticado:', user);
+
+        if (!user) {
+          setError('Usuario no autenticado.');
+          return;
+        }
+
+        const uid = user.uid;
+
+        // Obtener tarjetas del usuario
+        const tarjetasSnapshot = await getDocs(collection(db, `usuarios/${uid}/tarjetas`));
+        const transaccionesData: any[] = [];
+
+        for (const tarjetaDoc of tarjetasSnapshot.docs) {
+          const tarjetaID = tarjetaDoc.id;
+
+          // Obtener transacciones de cada tarjeta
+          const transaccionesSnapshot = await getDocs(
+            collection(db, `usuarios/${uid}/tarjetas/${tarjetaID}/transacciones`)
+          );
+
+          transaccionesSnapshot.forEach((trans) => {
+            transaccionesData.push({
+              id: trans.id,
+              ...trans.data(),
+            });
+          });
+        }
+
+        setTransacciones(transaccionesData);
       } catch (error) {
-        console.error('Error al obtener los movimientos:', error);
+        console.error('Error al obtener las transacciones:', error);
+        setError('Ocurrió un error al cargar las transacciones.');
       }
     };
 
-    obtenerMovimientos();
+    obtenerTransacciones();
   }, []);
 
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Lista de Transacciones</IonTitle>
+          <IonTitle>Transacciones</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        {movimientos.length > 0 ? (
+        {error ? (
+          <p>{error}</p>
+        ) : transacciones.length > 0 ? (
           <IonList>
-            {movimientos.map(movimiento => (
-              <IonItem key={movimiento.id}>
+            {transacciones.map((transaccion) => (
+              <IonItem key={transaccion.id}>
                 <IonLabel>
-                  <h2>{movimiento.tipo}</h2>
-                  <p>Fecha: {new Date(movimiento.fecha.seconds * 1000).toLocaleDateString()}</p>
-                  <p>Monto: {movimiento.monto} {movimiento.moneda}</p>
+                  <h2>{transaccion.tipo}</h2>
+                  <p>Descripción: {transaccion.descripcion}</p>
+                  <p>Fecha: {new Date(transaccion.fecha.seconds * 1000).toLocaleDateString()}</p>
+                  <p>Cantidad: {transaccion.cantidad}</p>
                 </IonLabel>
               </IonItem>
             ))}

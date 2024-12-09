@@ -8,3 +8,9 @@ https://unsplash.com/es/fotos/un-portatil-con-un-grafico-en-la-pantalla-MyRHFbfR
 
 
 
+git remote -v
+git remote remove origin
+git remote add origin https://github.com/tu-usuario/nombre-del-repositorio.git
+git add .
+git commit -m "Subiendo proyecto al nuevo repositorio"
+git push -u origin main
